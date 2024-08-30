@@ -1,0 +1,10 @@
+# 들여쓰기로 구분되기 때문에 잘 지켜줘야 한다.
+# 나의 환경 변수들
+# local : 내 것,
+# div : 다 같이 할 때
+# test : test할 때
+# prod : 운영할 떄 (main branch느낌)
+
+spring:
+    profiles:
+        active: local # application-local.yaml 을 읽는다.

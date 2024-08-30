@@ -1,0 +1,21 @@
+# 들여쓰기로 구분되기 때문에 잘 지켜줘야 한다.
+# 나의 환경 변수들
+server:
+    port: 9000 # 0으로 하면 무작위로 배정 받는다.
+spring:
+    application:
+        name: auth-service
+    datasource:
+        # test를 할 때는 실제 쓰는 DB가 아닌 dummy DB를 사용하는 것이 좋다.
+        url: jdbc:h2:mem:test # h2 database는 in-memory database이기 때문에 아무 port나 상관없다?
+        username: Jinho
+        password:
+#   ??? ???? DB? create table? ? ? ??.
+    jpa:
+        hibernate:
+            ddl-auto: create # ?? ??? ??? table? drop???.
+        show-sql: true # ? option? ??? table? ?????? ??? ?? terminal?? ? ? ??.
+
+#token:
+#    secret: vsdab1232fkewbquriebp12315555555aa
+#    expiration: 60000

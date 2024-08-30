@@ -1,0 +1,22 @@
+server:
+    port: 9002
+
+spring:
+    application:
+        name: song-service
+    datasource:
+        url: jdbc:mysql://localhost:3306/music_test2?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+        username: root
+        password: 1234
+#   ??? ???? DB? create table? ? ? ??.
+    jpa:
+        hibernate:
+            ddl-auto: create # ?? ??? ??? table? drop???.
+        show-sql: true # ? option? ??? table? ?????? ??? ?? terminal?? ? ? ??.
+eureka:
+    client:
+        service-url:
+            defaultZone: http://192.168.80.4:8762/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: JJH

@@ -1,0 +1,25 @@
+server:
+    port: 9001 # 0번 port는 존재하지 않는다.
+spring:
+    application:
+        name: playlist-service
+    datasource:
+        url: jdbc:mysql://localhost:3306/music_test3?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+        username: root
+        password: 1234
+#   ??? ???? DB? create table? ? ? ??.
+    jpa:
+        hibernate:
+            ddl-auto: create # ?? ??? ??? table? drop???.
+        show-sql: true # ? option? ??? table? ?????? ??? ?? terminal?? ? ? ??.
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8762/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: JJH
+
+token:
+    secret: vsdab1232fkewbquriebp12315555555aa
+    expiration: 600000

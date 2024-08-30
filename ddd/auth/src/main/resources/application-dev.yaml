@@ -1,0 +1,27 @@
+# 들여쓰기로 구분되기 때문에 잘 지켜줘야 한다.
+# 나의 환경 변수들
+server:
+    port: 9000 # 0으로 하면 무작위로 배정 받는다.
+spring:
+    application:
+        name: auth-service
+    datasource:
+        url: jdbc:mysql://localhost:3306/music_test2?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+        username: root
+        password: 1234
+#   ??? ???? DB? create table? ? ? ??.
+    jpa:
+        hibernate:
+            ddl-auto: create # ?? ??? ??? table? drop???.
+        show-sql: true # ? option? ??? table? ?????? ??? ?? terminal?? ? ? ??.
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8762/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: JJH
+
+#token:
+#    secret: vsdab1232fkewbquriebp12315555555aa
+#    expiration: 60000
